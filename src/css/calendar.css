@@ -1,0 +1,364 @@
+.cfx::after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  height: 0; }
+
+.fl {
+  float: left; }
+
+.fr {
+  float: right; }
+
+.header {
+  height: .9rem;
+  background: linear-gradient(-269deg, #3F86FF 1%, #679FFF 99%);
+  font-size: .32rem;
+  color: #fff;
+  line-height: .9rem;
+  position: relative; }
+  .header .arrow-left,
+  .header .arrow-right {
+    text-align: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: .5rem; }
+  .header .arrow-left {
+    left: .67rem;
+    background: url("../images/padeup.png") no-repeat center center;
+    background-size: .5rem .5rem; }
+  .header .arrow-right {
+    right: .67rem;
+    background: url("../images/pagedown.png") no-repeat center center;
+    background-size: .5rem .5rem; }
+  .header .date-txt {
+    text-align: center;
+    position: relative;
+    width: 2.48rem;
+    margin: 0 auto; }
+    .header .date-txt::after {
+      position: absolute;
+      content: "";
+      background: url("../images/system-pull-down.png") no-repeat center center;
+      top: 0;
+      right: -.4rem;
+      height: 100%;
+      width: 0.36rem;
+      background-size: .5rem .5rem; }
+
+.calendar-header {
+  background: #fff;
+  font-size: .26rem;
+  color: #A6A8B6;
+  padding-top: .52rem; }
+  .calendar-header::after {
+    content: "";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    height: 0; }
+  .calendar-header li {
+    width: .56rem;
+    height: .56rem;
+    float: left;
+    text-align: center;
+    line-height: .56rem;
+    padding: 0 .255rem; }
+
+#calendar {
+  width: 7.5rem;
+  background: #fff; }
+  #calendar li {
+    float: left;
+    padding: .154rem .255rem;
+    color: #333333;
+    text-align: center;
+    font-size: .34rem;
+    position: relative; }
+    #calendar li span {
+      display: block;
+      width: .56rem;
+      height: .56rem;
+      line-height: .56rem;
+      border-radius: 50%;
+      transition: background .2s, color .2s; }
+      #calendar li span.defaultDay {
+        background: #ECEDF1; }
+      #calendar li span.selected {
+        background: #3F86FF;
+        color: #fff; }
+    #calendar li .error, #calendar li .normal {
+      position: absolute;
+      width: .12rem;
+      height: .12rem;
+      border-radius: 50%;
+      left: 50%;
+      margin-left: -.06rem;
+      bottom: 0; }
+    #calendar li .error {
+      background: #FF7C00; }
+    #calendar li .normal {
+      background: #00C06C; }
+    #calendar li.prevMonth, #calendar li.nextMonth {
+      color: #C0C4CC; }
+
+.details {
+  padding-top: .2rem;
+  width: 7.5rem;
+  background: #F5f5f5; }
+  .details .tab {
+    height: .82rem;
+    font-size: .3rem;
+    color: #A6A8B6;
+    position: relative;
+    background: #fff; }
+    .details .tab::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      border-bottom: 1px solid #EEEEEE;
+      -webkit-transform: scaleY(0.5);
+      -webkit-transform-origin: 0 0; }
+    .details .tab .rule_type {
+      color: #606266;
+      letter-spacing: -0.09px;
+      line-height: .82rem;
+      padding-left: .3rem; }
+      .details .tab .rule_type i {
+        font-size: .28rem;
+        font-style: normal; }
+      .details .tab .rule_type span {
+        font-size: .28rem;
+        margin-left: .27rem; }
+    .details .tab .typeStatus {
+      height: 100%;
+      line-height: .82rem;
+      font-size: .28rem;
+      color: #C0C4CC; }
+      .details .tab .typeStatus span {
+        padding-left: .17rem;
+        position: relative; }
+        .details .tab .typeStatus span::after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          margin-top: -.06rem;
+          left: 0;
+          width: .12rem;
+          height: .12rem;
+          border-radius: 50%; }
+      .details .tab .typeStatus .normal {
+        padding-right: .4rem; }
+        .details .tab .typeStatus .normal::after {
+          background: #00C06C; }
+      .details .tab .typeStatus .error {
+        padding-right: .32rem; }
+        .details .tab .typeStatus .error::after {
+          background: #FF7C00; }
+  .details .atten_list {
+    width: 7.5rem;
+    padding-top: .5rem;
+    transition: all .2s;
+    background: #fff;
+    min-height: 4.524rem;
+    position: relative; }
+    .details .atten_list .nodata {
+      position: absolute;
+      width: 100%;
+      line-height: 4.524rem;
+      text-align: center;
+      font-size: .28rem;
+      color: #C0C4CC;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      font-style: normal; }
+    .details .atten_list .details_list {
+      width: 6.61rem;
+      font-size: .26rem;
+      color: #A6A8B6;
+      letter-spacing: -0.08px;
+      padding-left: .89rem; }
+      .details .atten_list .details_list li {
+        padding-bottom: 1rem;
+        position: relative; }
+        .details .atten_list .details_list li .cir {
+          position: absolute;
+          width: .15rem;
+          height: .15rem;
+          border-radius: 50%;
+          background: #A6A8B6;
+          left: -.31rem;
+          top: .12rem;
+          z-index: 1; }
+        .details .atten_list .details_list li .cir_line {
+          position: absolute;
+          width: 1px;
+          height: 100%;
+          background: #D5D7E5;
+          left: -.24031249rem;
+          top: .2rem;
+          opacity: 0;
+          -webkit-transform: scaleX(0.5);
+          -webkit-transform-origin: 0 0; }
+        .details .atten_list .details_list li .work_time {
+          font-size: 0;
+          margin-bottom: .1rem; }
+          .details .atten_list .details_list li .work_time i, .details .atten_list .details_list li .work_time span {
+            font-size: .26rem; }
+          .details .atten_list .details_list li .work_time i {
+            font-style: normal; }
+        .details .atten_list .details_list li .sign_time {
+          font-size: 0;
+          margin-bottom: .1rem; }
+          .details .atten_list .details_list li .sign_time span {
+            font-size: .34rem;
+            color: #333333;
+            letter-spacing: -0.11px;
+            font-weight: 500; }
+            .details .atten_list .details_list li .sign_time span.islate, .details .atten_list .details_list li .sign_time span.nomalStatus {
+              display: inline-block;
+              border-radius: .04rem;
+              font-size: .2rem;
+              font-weight: normal;
+              padding: 1px .08rem;
+              letter-spacing: -0.07px;
+              margin-left: .1rem;
+              position: relative;
+              top: -.02rem; }
+            .details .atten_list .details_list li .sign_time span.islate {
+              border: .02rem solid #F5A623;
+              color: #F5A623; }
+            .details .atten_list .details_list li .sign_time span.nomalStatus {
+              border: .02rem solid #238CF5;
+              color: #238CF5; }
+        .details .atten_list .details_list li .site {
+          font-size: .26rem;
+          color: #A6A8B6;
+          letter-spacing: -0.08px; }
+          .details .atten_list .details_list li .site p {
+            position: relative;
+            padding-left: .24rem;
+            max-width: 90%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap; }
+            .details .atten_list .details_list li .site p i {
+              position: absolute;
+              width: .22rem;
+              height: .27rem;
+              background: url("../images/location_min.png") no-repeat;
+              background-size: .22rem .27rem;
+              left: 0;
+              top: 2px; }
+        .details .atten_list .details_list li .action {
+          padding-top: .16rem; }
+          .details .atten_list .details_list li .action a {
+            color: #4B6CA5;
+            font-size: .26rem; }
+            .details .atten_list .details_list li .action a i {
+              font-style: normal; }
+          .details .atten_list .details_list li .action a:first-child {
+            padding-right: .25rem; }
+          .details .atten_list .details_list li .action .examine {
+            color: #FF9900; }
+          .details .atten_list .details_list li .action .refuse {
+            color: #ed3f14; }
+
+.dateModal {
+  width: 7.5rem;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999; }
+  .dateModal .conetent {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: #f7f7f7; }
+  .dateModal .dateScroll::after {
+    content: "";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    height: 0; }
+  .dateModal .action {
+    height: .88rem;
+    display: none;
+    font-size: .36rem;
+    line-height: .88rem;
+    position: relative; }
+    .dateModal .action a {
+      color: #007aff; }
+    .dateModal .action::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      border-bottom: 1px solid #EEEEEE;
+      -webkit-transform: scaleY(0.5);
+      -webkit-transform-origin: 0 0; }
+  .dateModal .cancel, .dateModal .enter {
+    padding: 0 .2rem; }
+  .dateModal .cancel {
+    float: left; }
+  .dateModal .enter {
+    float: right; }
+  .dateModal .swiper-container {
+    width: 33.333333%;
+    height: 0;
+    float: left;
+    text-align: center;
+    font-size: .36rem; }
+  .dateModal .swiper-slide {
+    color: #666; }
+  .dateModal .swiper-slide-active {
+    color: #000; }
+
+.fixLoading {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 7.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  z-index: 999;
+  font-size: .26rem;
+  display: none; }
+  .fixLoading div {
+    width: 1.8rem;
+    height: 1.8rem;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background: rgba(0, 0, 0, 0.66);
+    border-radius: 10%;
+    text-align: center; }
+    .fixLoading div img {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-top: -.35rem;
+      margin-left: -.35rem;
+      width: .7rem;
+      height: .7rem; }
+    .fixLoading div span {
+      position: absolute;
+      width: 1.25rem;
+      text-align: center;
+      left: 50%;
+      margin-left: -.625rem;
+      bottom: .1rem;
+      color: #fff; }
