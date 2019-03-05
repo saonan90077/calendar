@@ -329,21 +329,4 @@
         }
         
     });
-
-
-
-    //详情
-    var	maxIndex = $(".details_list").eq(0).find("li").length-1,
-    outerWorkMaxIndex = $(".details_list").eq(1).find("li").length-1;
-    function showToggle(el, index) {
-    $(el).eq(index).find("li").each(function(index, dom) {
-        if(index >= maxIndex) {
-            return false;
-        }else{
-            $(this).find(".cir_line").css("opacity", 1);
-        }
-    });
-    }
-    showToggle(".details_list", 0);
-    showToggle(".details_list", 1);
 });
