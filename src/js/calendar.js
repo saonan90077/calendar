@@ -322,6 +322,8 @@
             mySwiper.slideTo(0);
         }else{
             if(mySwiper.activeIndex == 1) {
+                mySwiper.allowSlideNext = y == new Date().getFullYear() ? false : true;
+                $(".arrow-right").css("opacity", mySwiper.allowSlideNext ? "1" : "0.6");
                 getClickDate([y, m , d]);
             }else{
                 mySwiper.slideTo(1);
