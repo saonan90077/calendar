@@ -322,7 +322,8 @@
             mySwiper.slideTo(0);
         }else{
             if(mySwiper.activeIndex == 1) {
-                mySwiper.allowSlideNext = y == new Date().getFullYear() ? false : true;
+                var flag = y == new Date().getFullYear() && m == new Date().getMonth() + 1;
+                mySwiper.allowSlideNext = flag ? false : true;
                 $(".arrow-right").css("opacity", mySwiper.allowSlideNext ? "1" : "0.6");
                 getClickDate([y, m , d]);
             }else{
