@@ -1,3 +1,4 @@
+//当月日历类
 class Calendar {
     constructor(option) {
         this.year = option.year;
@@ -76,6 +77,7 @@ class Calendar {
             })
         }
         let len = prevList.length + currentList.length;
+        //总元素数为42
         for(let i = len; i < 42; i++) {
             nextList.push({
                 type: 'next',
