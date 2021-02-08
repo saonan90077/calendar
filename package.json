@@ -1,7 +1,13 @@
 {
   "devDependencies": {
-    "browser-sync": "^2.26.3",
-    "gulp": "^3.9.1",
-    "gulp-sass": "^4.0.2"
+    "@babel/core": "^7.12.13",
+    "@babel/preset-env": "^7.12.13",
+    "browser-sync": "^2.26.14",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-copy": "^4.0.1",
+    "gulp-pxtorem": "^3.0.0",
+    "gulp-sass": "^4.1.0"
   }
 }

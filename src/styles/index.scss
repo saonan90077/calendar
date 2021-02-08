@@ -1,0 +1,57 @@
+html,
+body,
+ul,
+li{
+	margin: 0;
+	padding: 0;
+}
+ul{
+	list-style: none;
+}
+html, body, .app{
+	height: 100%;
+}
+.app{
+	display: flex;
+	flex-direction: column;
+	.week-head,
+	.week-body_item{
+		display: flex;
+		color: #A6A8B6;
+		font-size: .26rem;
+		flex-wrap: wrap;
+		li{
+			flex: 1 0 14%;
+			text-align: center;
+			line-height: .56rem;
+		}
+	}
+	.swiper-container{
+		
+	}
+	.week-body_item{
+		color: #333333;
+		display: flex;
+		li{
+			position: relative;
+			&.current{
+				&::after{
+					content: '';
+					position: absolute;
+					width: .56rem;
+					height: .56rem;
+					border-radius: 50%;
+					background: #ECEDF1;
+					left: 50%;
+					top: 50%;
+					transform: translate(-50%, -50%);
+					z-index: -1;
+				}
+			}
+		}
+		li[data-type='preMonth'],
+		li[data-type='nextMonth']{
+			color: #C0C4CC;
+		}
+	}
+}
